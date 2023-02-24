@@ -1,0 +1,9 @@
+name: Bedwars
+version: '${project.version}'
+main: de.mxscha.bedwars.BedwarsCore
+api-version: 1.19
+authors: [ Mxscha ]
+
+commands:
+  bedwars:
+  start:
