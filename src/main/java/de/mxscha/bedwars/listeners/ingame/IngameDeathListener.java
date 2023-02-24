@@ -259,6 +259,7 @@ public class IngameDeathListener implements Listener {
                 Location SpawnGelb = MapLocationManager.getLocation("SpawnGelb", map, true);
                 Location SpawnGrün = MapLocationManager.getLocation("SpawnGrün", map, true);
                 Location SpawnBlau = MapLocationManager.getLocation("SpawnBlau", map, true);
+                Location Specs = MapLocationManager.getLocation("Spectators", map, true);
                 if (Game.getTeamRed().containsValue(player)) {
                     event.setRespawnLocation(SpawnRot);
                     player.teleport(SpawnRot);
@@ -274,6 +275,10 @@ public class IngameDeathListener implements Listener {
                 if (Game.getTeamGreen().containsValue(player)) {
                     event.setRespawnLocation(SpawnGrün);
                     player.teleport(SpawnGrün);
+                }
+                if (Game.getSpectators().contains(player)) {
+                    event.setRespawnLocation(Specs);
+                    player.teleport(Specs);
                 }
             }
         }

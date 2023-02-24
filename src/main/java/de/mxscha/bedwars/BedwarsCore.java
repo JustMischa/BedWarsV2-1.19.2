@@ -6,6 +6,8 @@ import de.mxscha.bedwars.commands.autocomplete.BedWarsTabCompletion;
 import de.mxscha.bedwars.listeners.ingame.*;
 import de.mxscha.bedwars.listeners.ingame.spectator.SpectatorDamageListener;
 import de.mxscha.bedwars.listeners.ingame.spectator.SpectatorDropItemListener;
+import de.mxscha.bedwars.listeners.ingame.spectator.SpectatorJoinListener;
+import de.mxscha.bedwars.listeners.ingame.spectator.SpectatorQuitListener;
 import de.mxscha.bedwars.listeners.lobby.*;
 import de.mxscha.bedwars.listeners.lobby.cancel.LobbyBuildListener;
 import de.mxscha.bedwars.listeners.lobby.cancel.LobbyDamageListener;
@@ -73,13 +75,15 @@ public final class BedwarsCore extends JavaPlugin {
 
         pluginManager.registerEvents(new SpectatorDamageListener(), this);
         pluginManager.registerEvents(new SpectatorDropItemListener(), this);
+        pluginManager.registerEvents(new SpectatorJoinListener(), this);
+        pluginManager.registerEvents(new SpectatorQuitListener(), this);
 
         pluginManager.registerEvents(new IngameDeathListener(), this);
         pluginManager.registerEvents(new IngameAntiTeamDamage(), this);
         pluginManager.registerEvents(new IngameBuildListener(), this);
         pluginManager.registerEvents(new IngameChatListener(), this);
         pluginManager.registerEvents(new IngameBedBreakListener(), this);
-
+        pluginManager.registerEvents(new IngameQuitListener(), this);
 
         getCommand("bedwars").setExecutor(new BedWarsCommand());
         getCommand("bedwars").setTabCompleter(new BedWarsTabCompletion());

@@ -33,7 +33,7 @@ public class SpectatorManager {
         new BukkitRunnable() {
             @Override
             public void run() {
-                player.teleport(MapLocationManager.getLocation("Spectator", BedwarsCore.getInstance().getGame().getGameMap(), true));
+                player.teleport(MapLocationManager.getLocation("Spectators", BedwarsCore.getInstance().getGame().getGameMap(), true));
             }
         }.runTaskLater(BedwarsCore.getInstance(), 10);
     }

@@ -106,20 +106,20 @@ public class BedWarsCommand implements CommandExecutor {
                                             var set11 = new TextComponent("§8[§6§lKlicke§8]");
                                             var set12 = new TextComponent("§8[§6§lKlicke§8]");
 
-                                            var BronzeRot = new TextComponent("§cBronze Spawner Rot");
-                                            var BronzeBlau = new TextComponent("§cBronze Spawner §9Blau");
-                                            var BronzeGelb = new TextComponent("§cBronze Spawner §eGelb");
-                                            var BronzeGrün = new TextComponent("§cBronze Spawner §aGrün");
+                                            var BronzeRot = new TextComponent("§cBronze Rot");
+                                            var BronzeBlau = new TextComponent("§cBronze §9Blau");
+                                            var BronzeGelb = new TextComponent("§cBronze §eGelb");
+                                            var BronzeGrün = new TextComponent("§cBronze §aGrün");
 
-                                            var EisenRot = new TextComponent("§fEisen Spawner §cRot");
-                                            var EisenBlau = new TextComponent("§fEisen Spawner §9Blau");
-                                            var EisenGelb = new TextComponent("§fEisen Spawner §eGelb");
-                                            var EisenGrün = new TextComponent("§fEisen Spawner §aGrün");
+                                            var EisenRot = new TextComponent("§fEisen §cRot");
+                                            var EisenBlau = new TextComponent("§fEisen §9Blau");
+                                            var EisenGelb = new TextComponent("§fEisen §eGelb");
+                                            var EisenGrün = new TextComponent("§fEisen §aGrün");
 
-                                            var GoldRot = new TextComponent("§6Gold Spawner §cRot");
-                                            var GoldBlau = new TextComponent("§6Gold Spawner §9Blau");
-                                            var GoldGelb = new TextComponent("§6Gold Spawner §eGelb");
-                                            var GoldGrün = new TextComponent("§6Gold Spawner §aGrün");
+                                            var GoldRot = new TextComponent("§6Gold §cRot");
+                                            var GoldBlau = new TextComponent("§6Gold §9Blau");
+                                            var GoldGelb = new TextComponent("§6Gold §eGelb");
+                                            var GoldGrün = new TextComponent("§6Gold §aGrün");
 
                                             set1.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("§a§lSetzen").color(ChatColor.GREEN).create()));
                                             set2.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("§a§lSetzen").color(ChatColor.GREEN).create()));
@@ -150,12 +150,15 @@ public class BedWarsCommand implements CommandExecutor {
                                             player.sendMessage(Text, BronzeRot, Middle, set1, toSet);
                                             player.sendMessage(Text, EisenRot, Middle, set5, toSet);
                                             player.sendMessage(Text, GoldRot, Middle, set9, toSet);
+                                            player.sendMessage(" ");
                                             player.sendMessage(Text, BronzeBlau, Middle, set2, toSet);
                                             player.sendMessage(Text, EisenBlau, Middle, set6, toSet);
                                             player.sendMessage(Text, GoldBlau, Middle, set10, toSet);
+                                            player.sendMessage(" ");
                                             player.sendMessage(Text, BronzeGelb, Middle, set3, toSet);
                                             player.sendMessage(Text, EisenGelb, Middle, set7, toSet);
                                             player.sendMessage(Text, GoldGelb, Middle, set11, toSet);
+                                            player.sendMessage(" ");
                                             player.sendMessage(Text, BronzeGrün, Middle, set4, toSet);
                                             player.sendMessage(Text, EisenGrün, Middle, set8, toSet);
                                             player.sendMessage(Text, GoldGrün, Middle, set12, toSet);

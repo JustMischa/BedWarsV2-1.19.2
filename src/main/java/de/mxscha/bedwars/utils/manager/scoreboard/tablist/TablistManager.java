@@ -3,6 +3,8 @@ package de.mxscha.bedwars.utils.manager.scoreboard.tablist;
 import de.mxscha.bedwars.utils.game.Game;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
+import org.bukkit.Server;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
@@ -77,6 +79,6 @@ public class TablistManager {
     }
 
     private static void setPlayerList(Player player) {
-        player.setPlayerListHeaderFooter("      " + "§bBedWars-1"+      "\n             ", "           §c§lCLOSED §a§lALPHA!\n§7wie man hier an der tab sehen kann!           \n                   ");
+        player.setPlayerListHeaderFooter("\n" + "§8» §a§lM" + net.md_5.bungee.api.ChatColor.of("#FFAB42") + "§lNetwork §8«"+ "\n", "\n §8» §7Version§8: §a4x2 \n §8» §7Dein Ping§8: "+ player.getPing() + "\n                   ");
     }
 }
