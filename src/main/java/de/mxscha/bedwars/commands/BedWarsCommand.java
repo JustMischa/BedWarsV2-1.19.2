@@ -88,35 +88,35 @@ public class BedWarsCommand implements CommandExecutor {
 
                                             var Text = new TextComponent(" §8» ");
                                             var Middle = new TextComponent(" §8● §");
-                                            var ClickHere = new TextComponent("§7Klicke ");
+                                            var ClickHere = new TextComponent("§7lKlicke ");
                                             var toSet = new TextComponent(" §7um diese Location zu Setzen!");
 
-                                            var set1 = new TextComponent("§8[§6§lHier§8]");
-                                            var set2 = new TextComponent("§8[§6§lHier§8]");
-                                            var set3 = new TextComponent("§8[§6§lHier§8]");
-                                            var set4 = new TextComponent("§8[§6§lHier§8]");
+                                            var set1 = new TextComponent("§8[§6§lKlicke§8]");
+                                            var set2 = new TextComponent("§8[§6§lKlicke§8]");
+                                            var set3 = new TextComponent("§8[§6§lKlicke§8]");
+                                            var set4 = new TextComponent("§8[§6§lKlicke§8]");
 
-                                            var set5 = new TextComponent("§8[§6§lHier§8]");
-                                            var set6 = new TextComponent("§8[§6§lHier§8]");
-                                            var set7 = new TextComponent("§8[§6§lHier§8]");
-                                            var set8 = new TextComponent("§8[§6§lHier§8]");
+                                            var set5 = new TextComponent("§8[§6§lKlicke§8]");
+                                            var set6 = new TextComponent("§8[§6§lKlicke§8]");
+                                            var set7 = new TextComponent("§8[§6§lKlicke§8]");
+                                            var set8 = new TextComponent("§8[§6§lKlicke§8]");
 
-                                            var set9 = new TextComponent("§8[§6§lHier§8]");
-                                            var set10 = new TextComponent("§8[§6§lHier§8]");
-                                            var set11 = new TextComponent("§8[§6§lHier§8]");
-                                            var set12 = new TextComponent("§8[§6§lHier§8]");
+                                            var set9 = new TextComponent("§8[§6§lKlicke§8]");
+                                            var set10 = new TextComponent("§8[§6§lKlicke§8]");
+                                            var set11 = new TextComponent("§8[§6§lKlicke§8]");
+                                            var set12 = new TextComponent("§8[§6§lKlicke§8]");
 
                                             var BronzeRot = new TextComponent("§cBronze Spawner Rot");
                                             var BronzeBlau = new TextComponent("§cBronze Spawner §9Blau");
                                             var BronzeGelb = new TextComponent("§cBronze Spawner §eGelb");
                                             var BronzeGrün = new TextComponent("§cBronze Spawner §aGrün");
 
-                                            var EisenRot = new TextComponent("§fEisen Spawner Rot");
+                                            var EisenRot = new TextComponent("§fEisen Spawner §cRot");
                                             var EisenBlau = new TextComponent("§fEisen Spawner §9Blau");
                                             var EisenGelb = new TextComponent("§fEisen Spawner §eGelb");
                                             var EisenGrün = new TextComponent("§fEisen Spawner §aGrün");
 
-                                            var GoldRot = new TextComponent("§6Gold Spawner Rot");
+                                            var GoldRot = new TextComponent("§6Gold Spawner §cRot");
                                             var GoldBlau = new TextComponent("§6Gold Spawner §9Blau");
                                             var GoldGelb = new TextComponent("§6Gold Spawner §eGelb");
                                             var GoldGrün = new TextComponent("§6Gold Spawner §aGrün");
@@ -147,18 +147,18 @@ public class BedWarsCommand implements CommandExecutor {
                                             set11.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/bedwars setup set spawner gold gelb"));
                                             set12.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/bedwars setup set spawner gold grün"));
 
-                                            player.sendMessage(Text, BronzeRot, Middle, ClickHere, set1, toSet);
-                                            player.sendMessage(Text, BronzeBlau, Middle,  ClickHere, set2, toSet);
-                                            player.sendMessage(Text, BronzeGelb, Middle,  ClickHere, set3, toSet);
-                                            player.sendMessage(Text, BronzeGrün, Middle,  ClickHere, set4, toSet);
-                                            player.sendMessage(Text, EisenRot, Middle, ClickHere, set5, toSet);
-                                            player.sendMessage(Text, EisenBlau, Middle,  ClickHere, set6, toSet);
-                                            player.sendMessage(Text, EisenGelb, Middle,  ClickHere, set7, toSet);
-                                            player.sendMessage(Text, EisenGrün, Middle,  ClickHere, set8, toSet);
-                                            player.sendMessage(Text, GoldRot, Middle, ClickHere, set9, toSet);
-                                            player.sendMessage(Text, GoldBlau, Middle,  ClickHere, set10, toSet);
-                                            player.sendMessage(Text, GoldGelb, Middle,  ClickHere, set11, toSet);
-                                            player.sendMessage(Text, GoldGrün, Middle,  ClickHere, set12, toSet);
+                                            player.sendMessage(Text, BronzeRot, Middle, set1, toSet);
+                                            player.sendMessage(Text, EisenRot, Middle, set5, toSet);
+                                            player.sendMessage(Text, GoldRot, Middle, set9, toSet);
+                                            player.sendMessage(Text, BronzeBlau, Middle, set2, toSet);
+                                            player.sendMessage(Text, EisenBlau, Middle, set6, toSet);
+                                            player.sendMessage(Text, GoldBlau, Middle, set10, toSet);
+                                            player.sendMessage(Text, BronzeGelb, Middle, set3, toSet);
+                                            player.sendMessage(Text, EisenGelb, Middle, set7, toSet);
+                                            player.sendMessage(Text, GoldGelb, Middle, set11, toSet);
+                                            player.sendMessage(Text, BronzeGrün, Middle, set4, toSet);
+                                            player.sendMessage(Text, EisenGrün, Middle, set8, toSet);
+                                            player.sendMessage(Text, GoldGrün, Middle, set12, toSet);
 
                                             player.sendMessage("§8§m                                                                            ");
                                         } else

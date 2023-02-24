@@ -42,6 +42,7 @@ public class Game {
         BedwarsCore.getInstance().getMapTeleport().teleportPlayersToMap(gameMap);
         Bukkit.getOnlinePlayers().forEach(BedwarsCore.getInstance().getInventoryManager()::removeItems);
         Bukkit.getOnlinePlayers().forEach(IngameScoreboard::new);
+        BedwarsCore.getInstance().getSpawner().startSpawn(gameMap);
     }
 
     public void startEndingPhase(String winnerTeam) {

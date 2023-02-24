@@ -11,8 +11,8 @@ import de.mxscha.bedwars.listeners.lobby.cancel.LobbyBuildListener;
 import de.mxscha.bedwars.listeners.lobby.cancel.LobbyDamageListener;
 import de.mxscha.bedwars.listeners.lobby.cancel.LobbyDropItemListener;
 import de.mxscha.bedwars.utils.game.Game;
+import de.mxscha.bedwars.utils.game.extra.Spawner;
 import de.mxscha.bedwars.utils.game.map.MapTeleport;
-import de.mxscha.bedwars.utils.manager.build.MapResetManager;
 import de.mxscha.bedwars.utils.manager.countdown.LobbyCountdown;
 import de.mxscha.bedwars.utils.manager.inventory.Inventories;
 import de.mxscha.bedwars.utils.manager.inventory.PlayerInventoryManager;
@@ -38,6 +38,7 @@ public final class BedwarsCore extends JavaPlugin {
     private MapVoting mapVoting;
     private ShopManager shopManager;
     private SpectatorManager spectatorManager;
+    private Spawner spawner;
 
     @Override
     public void onEnable() {
@@ -56,6 +57,7 @@ public final class BedwarsCore extends JavaPlugin {
         mapVoting = new MapVoting();
         shopManager = new ShopManager();
         spectatorManager = new SpectatorManager();
+        spawner = new Spawner();
 
         new Inventories();
 
@@ -88,6 +90,10 @@ public final class BedwarsCore extends JavaPlugin {
 
     @Override
     public void onDisable() {
+    }
+
+    public Spawner getSpawner() {
+        return spawner;
     }
 
     public SpectatorManager getSpectatorManager() {
